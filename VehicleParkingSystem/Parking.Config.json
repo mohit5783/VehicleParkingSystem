@@ -1,0 +1,9 @@
+{
+  "ParkingID": 1,
+  "ParkingName": "Smart Parking",
+  "TotalNumberofParking": 670,
+  "LadiesParking": 23,
+  "HandicappedParking": 56,
+  "ParkingFloors": 5,
+  "ParkingRates": 2.0
+}

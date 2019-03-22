@@ -1,0 +1,63 @@
+﻿@model List<Dictionary<int, VehicleParkingSystem.Models.Activity>>
+
+<section class="content-header">
+    <h1>
+        Parking Activity
+        <small>Get In / Out details of the Parking</small>
+    </h1>
+</section>
+
+<section class="content container-fluid">
+    @{
+        <div class="container" style="width:95%;" align="center">
+
+            <table class="table">
+                <thead>
+                    <tr class="bg-primary">
+                        <th>Session ID</th>
+                        <th>Plate Number </th>
+                        <th>time</th>
+                        <th>Machine IP</th>
+                        <th>Type [In/Out]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null)
+                    {
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                @foreach (var key in item.Keys)
+                                {
+                                    <td class="bg-info"> @key</td>
+                                    <td class="bg-info"> @item[key].PlateNumber.Number</td>
+                                    var Timing = new DateTime(1970, 1, 1, 0, 0, 0).AddSeconds(Convert.ToDouble(@item[key].PlateNumber.TimeStamp)).ToString("dd/MMM/yyyy HH:mm:ss tt");
+                                    <td class="bg-info">@Timing</td>
+                                    @if (item[key].Type == "IN")
+                                    {
+                                        <td class="bg-info"> @item[key].INAgentMACID</td>
+                                        <td class="bg-info">IN</td>
+                                    }
+                                    else
+                                    {
+                                        <td class="bg-info"> @item[key].OUTAgentMACID</td>
+                                        <td class="bg-info">OUT</td>
+                                    }
+                                }
+
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td class="bg-warning">
+                                There are no vehicles parked
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</section>

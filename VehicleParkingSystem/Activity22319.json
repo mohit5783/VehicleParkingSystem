@@ -1,0 +1,98 @@
+[
+  {
+    "1": {
+      "Type": "IN",
+      "OUTAgentMACID": null,
+      "INAgentMACID": "12.34.56.78",
+      "PlateNumber": {
+        "Image": "Some random Path",
+        "Number": "JHL7442",
+        "TimeStamp": 1553243058
+      }
+    }
+  },
+  {
+    "2": {
+      "Type": "IN",
+      "OUTAgentMACID": null,
+      "INAgentMACID": "87.65.43.32",
+      "PlateNumber": {
+        "Image": "Some random Path",
+        "Number": "MP07HJ787S",
+        "TimeStamp": 1553243061
+      }
+    }
+  },
+  {
+    "3": {
+      "Type": "IN",
+      "OUTAgentMACID": null,
+      "INAgentMACID": "12.34.56.78",
+      "PlateNumber": {
+        "Image": "Some random Path",
+        "Number": "MP07AS7888",
+        "TimeStamp": 1553243065
+      }
+    }
+  },
+  {
+    "2": {
+      "Type": "OUT",
+      "OUTAgentMACID": "32.76.34.23",
+      "INAgentMACID": null,
+      "PlateNumber": {
+        "Image": "Some random Path",
+        "Number": "MP07HJ787S",
+        "TimeStamp": 1553245832
+      }
+    }
+  },
+  {
+    "4": {
+      "Type": "IN",
+      "OUTAgentMACID": null,
+      "INAgentMACID": "192.168.10.12",
+      "PlateNumber": {
+        "Image": "Some random Path",
+        "Number": "KJAS7897",
+        "TimeStamp": 1553247747
+      }
+    }
+  },
+  {
+    "5": {
+      "Type": "IN",
+      "OUTAgentMACID": null,
+      "INAgentMACID": "192.168.10.12",
+      "PlateNumber": {
+        "Image": "Some random Path",
+        "Number": "IUKJ7898",
+        "TimeStamp": 1553247755
+      }
+    }
+  },
+  {
+    "6": {
+      "Type": "IN",
+      "OUTAgentMACID": null,
+      "INAgentMACID": "87.65.43.32",
+      "PlateNumber": {
+        "Image": "Some random Path",
+        "Number": "KHJ12309",
+        "TimeStamp": 1553247768
+      }
+    }
+  },
+  {
+    "5": {
+      "Type": "OUT",
+      "OUTAgentMACID": "32.76.34.23",
+      "INAgentMACID": null,
+      "PlateNumber": {
+        "Image": "Some random Path",
+        "Number": "IUKJ7898",
+        "TimeStamp": 1553247780
+      }
+    }
+  }
+]

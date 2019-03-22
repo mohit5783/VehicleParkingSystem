@@ -1,0 +1,74 @@
+[
+  {
+    "SessionID": 1,
+    "Platenumber": "JHL7442",
+    "Intime": 1553243058,
+    "Outtime": null,
+    "INAgentMACID": "12.34.56.78",
+    "OUTAgentMACID": "",
+    "Status": "OnGoing"
+  },
+  {
+    "SessionID": 2,
+    "Platenumber": "MP07HJ787S",
+    "Intime": 1553243061,
+    "Outtime": null,
+    "INAgentMACID": "87.65.43.32",
+    "OUTAgentMACID": "",
+    "Status": "OnGoing"
+  },
+  {
+    "SessionID": 3,
+    "Platenumber": "MP07AS7888",
+    "Intime": 1553243065,
+    "Outtime": null,
+    "INAgentMACID": "12.34.56.78",
+    "OUTAgentMACID": "",
+    "Status": "OnGoing"
+  },
+  {
+    "SessionID": 2,
+    "Platenumber": "MP07HJ787S",
+    "Intime": 1553243061,
+    "Outtime": 1553245832,
+    "INAgentMACID": "87.65.43.32",
+    "OUTAgentMACID": "32.76.34.23",
+    "Status": "Ended"
+  },
+  {
+    "SessionID": 4,
+    "Platenumber": "KJAS7897",
+    "Intime": 1553247747,
+    "Outtime": null,
+    "INAgentMACID": "192.168.10.12",
+    "OUTAgentMACID": "",
+    "Status": "OnGoing"
+  },
+  {
+    "SessionID": 5,
+    "Platenumber": "IUKJ7898",
+    "Intime": 1553247755,
+    "Outtime": null,
+    "INAgentMACID": "192.168.10.12",
+    "OUTAgentMACID": "",
+    "Status": "OnGoing"
+  },
+  {
+    "SessionID": 6,
+    "Platenumber": "KHJ12309",
+    "Intime": 1553247768,
+    "Outtime": null,
+    "INAgentMACID": "87.65.43.32",
+    "OUTAgentMACID": "",
+    "Status": "OnGoing"
+  },
+  {
+    "SessionID": 5,
+    "Platenumber": "IUKJ7898",
+    "Intime": 1553247755,
+    "Outtime": 1553247780,
+    "INAgentMACID": "192.168.10.12",
+    "OUTAgentMACID": "32.76.34.23",
+    "Status": "Ended"
+  }
+]

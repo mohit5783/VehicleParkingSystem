@@ -1,0 +1,61 @@
+﻿@model List<Session>
+<section class="content-header">
+    <h1>
+        Parking Sessions
+        <small>Get In / Out details of the Parking</small>
+    </h1>
+</section>
+
+<section class="content container-fluid">
+    <div class="container" style="width:95%;" align="center">
+        <table class="table">
+            <thead>
+                <tr class="bg-primary">
+                    <th>Session ID</th>
+                    <th>Plate Number </th>
+                    <th>In time</th>
+                    <th>Out time</th>
+                    <th>In Machine IP</th>
+                    <th>Out Machine IP</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+                    @if (Model.Count <= 0)
+                    {
+                        <tr>
+                            <td class="bg-warning" colspan="5" align="center">
+                                There are no vehicles parked
+                            </td>
+                        </tr>
+                    }
+                    @foreach (var item in Model)
+                    {
+                        string strvehicleExitTime = "";
+                        DateTime VehicleEntryTime = new DateTime(1970, 1, 1, 0, 0, 0).AddSeconds(Convert.ToDouble(@item.Intime));
+                        DateTime VehicleExitTime = new DateTime(1970, 1, 1, 0, 0, 0).AddSeconds(Convert.ToDouble(@item.Outtime));
+                        if (VehicleExitTime.Year <= 2000)
+                        {
+                            strvehicleExitTime = "Still Parked";
+                        }
+                        else
+                        {
+                            strvehicleExitTime = VehicleExitTime.ToString("dd/MMM/yyyy hh:mm:ss tt");
+                        }
+                        <tr>
+                            <td class="bg-success"> @Html.DisplayFor(modelItem => item.SessionID)</td>
+                            <td class="bg-success"> @Html.DisplayFor(modelItem => item.Platenumber)</td>
+                            <td class="bg-success"> @VehicleEntryTime.ToString("dd/MMM/yyyy hh:mm:ss tt")</td>
+                            <td class="bg-success"> @strvehicleExitTime</td>
+                            <td class="bg-success"> @Html.DisplayFor(modelItem => item.INAgentMACID)</td>
+                            <td class="bg-success"> @Html.DisplayFor(modelItem => item.OUTAgentMACID)</td>
+                            <td class="bg-success"> @Html.DisplayFor(modelItem => item.Status) </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</section>

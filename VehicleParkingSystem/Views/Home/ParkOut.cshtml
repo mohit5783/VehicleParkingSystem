@@ -1,0 +1,49 @@
+﻿@model VehicleParkingSystem.Models.VehicleList
+<section class="content-header">
+    <h1>
+        Park Out!
+        <small>Get your Vehicle Un-Parked</small>
+    </h1>
+</section>
+
+<section class="content container-fluid">
+
+    <div class="container" style="width:95%;" align="center">
+        <table class="table">
+            <thead>
+                <tr class="bg-primary">
+                    <th>Session ID</th>
+                    <th>Plate Number </th>
+                    <th>In time</th>
+                    <th>In Machine IP</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+                    @if (Model.Vehicles.Count <= 0)
+                    {
+                        <tr>
+                            <td class="bg-warning" colspan="5" align="center">
+                                There are no vehicles parked
+                            </td>
+                        </tr>
+                    }
+                    @foreach (var item in Model.Vehicles)
+                    {
+                        var VehicleEntryTime = new DateTime(1970, 1, 1, 0, 0, 0).AddSeconds(Convert.ToDouble(@item.InTime)).ToString("dd/MMM/yyyy HH:mm:ss tt");
+                        <tr>
+                            <td class="bg-success"> @Html.DisplayFor(modelItem => item.SessionID)</td>
+                            <td class="bg-success"> @Html.DisplayFor(modelItem => item.PlateNumber)</td>
+                            <td class="bg-success"> @VehicleEntryTime</td>
+                            <td class="bg-success"> @Html.DisplayFor(modelItem => item.InMACIP)</td>
+                            <td class="bg-success"><a asp-action="UnParkVehicle" asp-route-id="@item.SessionID">Parkout</a></td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</section>
+

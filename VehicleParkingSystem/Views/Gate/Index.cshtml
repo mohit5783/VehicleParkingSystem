@@ -1,0 +1,26 @@
+﻿@model VehicleParkingSystem.Models.GateBarrier
+<section class="content-header">
+    <h1>
+        Gate Details
+        <small>All gate barrier in the Parking</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fas fa-tachometer-alt"></i> Home</a></li>
+        <li class="active">Gates</li>
+    </ol>
+</section>
+
+<section class="content">
+    <br />
+    <div>
+        @using (Html.BeginForm())
+        {
+
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.EditorForModel()
+            <br />
+            <input type="submit" value="Save Gate" class="btn btn-default" />
+        }
+    </div>
+</section>

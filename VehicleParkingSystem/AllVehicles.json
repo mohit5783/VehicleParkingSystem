@@ -1,0 +1,47 @@
+[
+  {
+    "SessionID": 1,
+    "PlateNumber": "JHL7442",
+    "InTime": 1553243058,
+    "OutTime": null,
+    "InMACIP": "12.34.56.78",
+    "OutMACIP": "",
+    "IsIn": 0
+  },
+  {
+    "SessionID": 3,
+    "PlateNumber": "MP07AS7888",
+    "InTime": 1553243065,
+    "OutTime": null,
+    "InMACIP": "12.34.56.78",
+    "OutMACIP": "",
+    "IsIn": 0
+  },
+  {
+    "SessionID": 4,
+    "PlateNumber": "KJAS7897",
+    "InTime": 1553247747,
+    "OutTime": null,
+    "InMACIP": "192.168.10.12",
+    "OutMACIP": "",
+    "IsIn": 0
+  },
+  {
+    "SessionID": 5,
+    "PlateNumber": "IUKJ7898",
+    "InTime": 1553247755,
+    "OutTime": 1553247780,
+    "InMACIP": "192.168.10.12",
+    "OutMACIP": "32.76.34.23",
+    "IsIn": 1
+  },
+  {
+    "SessionID": 6,
+    "PlateNumber": "KHJ12309",
+    "InTime": 1553247768,
+    "OutTime": null,
+    "InMACIP": "87.65.43.32",
+    "OutMACIP": "",
+    "IsIn": 0
+  }
+]

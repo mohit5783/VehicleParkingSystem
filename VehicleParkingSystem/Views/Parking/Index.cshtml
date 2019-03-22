@@ -1,0 +1,21 @@
+﻿@model VehicleParkingSystem.Models.Parking
+<section class="content-header">
+    <h1>
+        Parking Details
+        <small>Know more about the Parking</small>
+    </h1>
+</section>
+
+<section class="content container-fluid">
+    <div>
+        @using (Html.BeginForm())
+        {
+
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.EditorForModel()
+            <br />
+            <input type="submit" value="Save Parking" class="btn btn-default" />
+        }
+    </div>
+</section>
